@@ -7,8 +7,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./config/geoserver_data:/opt/geoserver_data
+      - ./config/geoserver_data:/opt/geoserver/data_dir
     environment:
-      - GEOSERVER_DATA_DIR=/opt/geoserver_data
+      - GEOSERVER_DATA_DIR=/opt/geoserver/data_dir
       - GEOSERVER_ADMIN_USER=admin
       - GEOSERVER_ADMIN_PASSWORD=geoserver
