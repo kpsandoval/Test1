@@ -1,0 +1,11 @@
+# Usa una imagen base que ya tiene GeoServer instalado
+FROM oscarfonts/geoserver
+
+# Copia tu configuración personalizada (capas, estilos, workspaces, etc.)
+COPY config/geoserver_data /opt/geoserver/data_dir
+
+# Expone el puerto por donde servirá WMS, WFS, etc.
+EXPOSE 8080
+
+# Comando por defecto al arrancar el contenedor
+CMD ["catalina.sh", "run"]
